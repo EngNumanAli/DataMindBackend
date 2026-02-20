@@ -11,3 +11,4 @@ langchain
  python-dotenv
  streamlit
 requests
+sse_starlette
