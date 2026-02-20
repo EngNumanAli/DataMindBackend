@@ -367,7 +367,7 @@ app = FastAPI(title="AI Data Analyst API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8501", "http://127.0.0.1:8501"],
+    allow_origins=["https://datamindfrontend.streamlit.app", "http://127.0.0.1:8501"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -392,4 +392,4 @@ log.info("✅ Routes added at /agent")
 
 if __name__ == "__main__":
     log.info("🚀 Starting on port 8000")
-    uvicorn.run(app, host="localhost", port=8000, log_level="info")
+    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
