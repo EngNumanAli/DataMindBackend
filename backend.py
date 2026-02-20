@@ -367,7 +367,7 @@ app = FastAPI(title="AI Data Analyst API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://datamindfrontend.streamlit.app", "http://127.0.0.1:8501"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
