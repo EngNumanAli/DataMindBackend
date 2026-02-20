@@ -1,0 +1,13 @@
+
+ fastapi
+ uvicorn
+langchain
+ langchain-groq
+ langchain-core 
+ langgraph
+ langserve
+ e2b-code-interpreter
+ pandas
+ python-dotenv
+ streamlit
+requests
