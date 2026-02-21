@@ -236,7 +236,7 @@ def CodeExecutorNode(state: State):
                 log.info("NODE 3 | CSV uploaded to sandbox")
 
             # Execute
-            execution = sandbox.run_code(code, timeout=500)
+            execution = sandbox.run_code(code, timeout=120)
 
             if execution.error:
                 name  = getattr(execution.error, "name",  "Error")
@@ -330,6 +330,3 @@ if __name__ == "__main__":
     port = int(os.getenv("PORT", 8000))
     log.info(f"🚀 Starting on port {port}")
     uvicorn.run(app, host="0.0.0.0", port=port, log_level="info")
-if __name__ == "__main__":
-    log.info("🚀 Starting on port 8000")
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
