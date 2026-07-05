@@ -380,7 +380,7 @@ html, body,
   align-items: center;
   gap: 0.5rem;
   font-family: 'Space Mono', monospace;
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   letter-spacing: 0.12em;
   color: var(--magenta);
   border: 1px solid rgba(224,64,251,0.3);
@@ -489,9 +489,9 @@ def check_health() -> bool:
         return False
 
 def validate_file(f) -> str | None:
-    if f is None:                          return "No file selected."
+    if f is None:                          return "The file is not selected."
     if f.size / 1024 / 1024 > MAX_FILE_MB: return f"File exceeds {MAX_FILE_MB} MB limit."
-    if not f.name.lower().endswith(".csv"):return "Only CSV files are supported."
+    if not f.name.lower().endswith(".csv"):return "csv file only please"
     return None
 
 
